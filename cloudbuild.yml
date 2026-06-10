@@ -5,7 +5,6 @@ args:
  - '-t'
  - 'asia-south1-docker.pkg.dev/project-125a5906-9774-4549-bad/imageregistry/nginx:$SHORT_SHA'
  - '.'
-
 - name: 'gcr.io/cloud-builders/docker'
 args:
  - push
