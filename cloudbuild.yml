@@ -24,6 +24,6 @@ steps:
       - push
       - asia-south1-docker.pkg.dev/project-125a5906-9774-4549-bad/imageregistry/nginx:$SHORT_SHA
 options:
-  logging: NONE
+  logging: CLOUD_LOGGING_ONLY
 images:
   - asia-south1-docker.pkg.dev/project-125a5906-9774-4549-bad/imageregistry/nginx:$SHORT_SHA
