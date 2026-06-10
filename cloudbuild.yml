@@ -29,6 +29,14 @@ steps:
     - '-c'
     - |
         sed -i "s|IMAGE_NAME|asia-south1-docker.pkg.dev/project-125a5906-9774-4549-bad/imageregistry/nginx:$SHORT_SHA|g" deployment.yml   
+  - name: 'ubuntu'
+    entrypoint: bash
+    args:
+    - '-c'
+    - |
+        echo "===== deployment.yaml ====="
+        cat deployment.yml
+
 options:
   logging: CLOUD_LOGGING_ONLY
 images:
