@@ -23,6 +23,15 @@ steps:
     args:
       - push
       - asia-south1-docker.pkg.dev/project-125a5906-9774-4549-bad/imageregistry/nginx:$SHORT_SHA
+      
+  - name: ubuntu
+    entrypoint: bash
+    args:
+    - '-c'
+    - | 
+        sed -i "s|IMAGE_URL|asia-south1-docker.pkg.dev/project-125a5906-9774-4549-bad/imageregistry/nginx:$SHORT_SHA|g" deployment.yml
+        cat deployment.yml
+    
 
 options:
   logging: CLOUD_LOGGING_ONLY
