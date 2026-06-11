@@ -43,7 +43,7 @@ steps:
       - --project
       - project-125a5906-9774-4549-bad
 
-  - name: gcr.io/cloud-builders/kubect
+  - name: gcr.io/cloud-builders/kubectl
     args:
       - apply
       - -f
