@@ -31,6 +31,7 @@ steps:
     - | 
         sed -i "s|IMAGE_URL|asia-south1-docker.pkg.dev/project-125a5906-9774-4549-bad/imageregistry/nginx:$SHORT_SHA|g" deployment.yml
         cat deployment.yml
+
   - name: gcr.io/cloud-builders/gcloud
     args:
       - container
@@ -41,7 +42,6 @@ steps:
       - us-central1
       - --project
       - project-125a5906-9774-4549-bad
-      
 
 
 options:
