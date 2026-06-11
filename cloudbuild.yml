@@ -43,6 +43,14 @@ steps:
       - --project
       - project-125a5906-9774-4549-bad
 
+  - name: gcr.io/cloud-builders/kubect
+    args:
+      - apply
+      - -f
+      - deployment.yml
+    env:
+      - CLOUDDSK_COMPUTE_REGION=us-central1
+      - CLOUDDSK_CONTAINER_CLUSTER=demo-cluster
 
 options:
   logging: CLOUD_LOGGING_ONLY
