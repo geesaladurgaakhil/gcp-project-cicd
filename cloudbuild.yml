@@ -49,8 +49,8 @@ steps:
       - -f
       - deployment.yml
     env:
-      - CLOUDDSK_COMPUTE_REGION=us-central1
-      - CLOUDDSK_CONTAINER_CLUSTER=demo-cluster
+      - CLOUDSDK_COMPUTE_REGION=us-central1
+      - CLOUDSDK_CONTAINER_CLUSTER=demo-cluster
 
 options:
   logging: CLOUD_LOGGING_ONLY
